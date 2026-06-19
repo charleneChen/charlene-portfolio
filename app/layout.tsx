@@ -38,7 +38,7 @@ export default function RootLayout({children}: RootLayoutProps) {
                   alt="Xiaolian (Charlene) Chen"
                   className="w-[80px] h-auto border-4 border-orange-500 border-dashed rounded-full block md:hidden"
                 />
-                <span className="font-bold text-2xl hidden md:inline">Xiaolian (Charlene) Chen</span>
+                <span className="font-bold text-2xl hidden md:inline">Tech with Charlene</span>
               </div>
             </Link>
             <ul className="flex items-center gap-4 md:gap-6 font-semibold text-base uppercase">
