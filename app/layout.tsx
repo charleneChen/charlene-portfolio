@@ -41,6 +41,7 @@ export default function RootLayout({children}: RootLayoutProps) {
                 <span className="font-bold text-2xl hidden md:inline">Tech with Charlene</span>
               </div>
             </Link>
+
             <ul className="flex items-center gap-4 md:gap-6 font-semibold text-base uppercase">
               <li className="hidden md:inline">
                 <Link href="/Home">Home</Link>
@@ -53,7 +54,7 @@ export default function RootLayout({children}: RootLayoutProps) {
               </li>
             </ul>
           </nav>
-      </header>
+        </header>
 
       {children}
       
