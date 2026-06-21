@@ -1,7 +1,7 @@
 [
-    { "id": 1, "displayName": "Project 1 - xxxx", "href": "#project1" },
-    { "id": 2, "displayName": "Project 2 - yyyy", "href": "#project2" },
-    { "id": 3, "displayName": "Project 3 - zzzz", "href": "#project3" },
-    { "id": 4, "displayName": "Project 4 - aaaa", "href": "#project4" },
-    { "id": 5, "displayName": "Project 5 - bbbb", "href": "#project5" }
+    { "id": 1, "displayName": "Project 1 - xxxx", "slug": "project1", "href": "#project1" },
+    { "id": 2, "displayName": "Project 2 - yyyy", "slug": "project2", "href": "#project2" },
+    { "id": 3, "displayName": "Project 3 - zzzz", "slug": "project3", "href": "#project3" },
+    { "id": 4, "displayName": "Project 4 - aaaa", "slug": "project4", "href": "#project4" },
+    { "id": 5, "displayName": "Project 5 - bbbb", "slug": "project5", "href": "#project5" }
 ]
