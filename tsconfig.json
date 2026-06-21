@@ -38,8 +38,7 @@
     "app/contact/page.jsx",
     "app/page.tsx",
     "app/layout.jsx",
-    "app/types/index.js",
-    "app/lib/models.js"
+    "app/types/index.js"
   ],
   "exclude": [
     "node_modules"

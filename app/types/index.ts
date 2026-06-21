@@ -1,13 +1,29 @@
+import type { ReactNode } from "react";
+
+// With Readonly — props are immutable (safer)
 export type RootLayoutProps = Readonly<{
-  children: React.ReactNode;
+  children: ReactNode;
 }>
 
-export type Model = {
-  id: number
-  name: string
-  description: string
-  likes: number
-  image: string
-  category: string
-  dateAdded: string
+// same as above
+export type ProjectsLayoutProps = {
+  readonly children: ReactNode
+}
+
+export type Link = {
+  id: number,
+  displayName: string
+  slug?: string,
+  href: string
+}
+
+export type ProjectPageProps = {
+  params: Promise<{
+    rojectName: string
+  }>
+}
+
+export type SideBarProp = {
+  links: Link[],
+  children?: ReactNode  // ← optional with ?
 }
