@@ -9,7 +9,7 @@ export default function Home() {
   const links = getAllLinks()
   return (
     <main className="px-5 py-10">
-      <section className="flex flex-col md:flex md:flex-row-reverse items-center gap-20 ">
+      <section className="flex flex-col md:flex md:flex-row-reverse items-center gap-20 mt-20">
         
         {/* Right - circle image with spinnign text */}
         <div className="flex-1 flex justify-center items-center">
