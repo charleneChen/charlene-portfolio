@@ -19,7 +19,7 @@ export type Link = {
 
 export type ProjectPageProps = {
   params: Promise<{
-    rojectName: string
+    projectName: string
   }>
 }
 
