@@ -20,11 +20,9 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
       <body className={`${albertSans.className} ${montserratAlternates.variable}`}>
-        <header className="w-full bg-sky-50 fixed z-50">
-          <NavBar />
-        </header>
 
-      {children}
+        <NavBar />
+        {children}
       
       </body>
     </html>

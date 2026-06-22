@@ -5,5 +5,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @theme {
-  --text-orange-accent: #F77D36
+  /* This maps text-orange-accent and hover:text-orange-accent */
+  --color-orange-accent: #F77D36;
 }

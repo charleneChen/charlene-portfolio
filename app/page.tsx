@@ -5,8 +5,8 @@ import Project from "@/app/components/Project"
 import SideBar from "@/app/components/SideBar"
 import { getAllLinks } from "@/app/lib/side-links"
 
-export default function Home() { 
-  const links = getAllLinks()
+export default async function Home() { 
+  const links = await getAllLinks()
   return (
     <main className="px-5 py-10">
       <section className="flex flex-col md:flex md:flex-row-reverse items-center gap-20 mt-20">
