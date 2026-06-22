@@ -7,9 +7,12 @@ import { getAllLinks } from "@/app/lib/side-links"
 
 export default async function Home() { 
   const links = await getAllLinks()
+
   return (
-    <main className="px-5 py-10">
-      <section className="flex flex-col md:flex md:flex-row-reverse items-center gap-20 mt-20">
+    <div className="">
+      <SideBar links={links} />
+      <main className="flex flex-1 flex-col w-full max-w-full pl-0 md:pl-55">
+        <section className="flex flex-col md:flex-row-reverse items-center gap-20 py-16">
         
         {/* Right - circle image with spinnign text */}
         <div className="flex-1 flex justify-center items-center">
@@ -52,15 +55,13 @@ export default async function Home() {
 
           <SocialLinks />
         </div>
-      </section>
+        </section>
       
-      <section className="flex flex-col gap-5 my-20">
-        <h2 className="capitalize font-bold text-3xl">My Projects</h2>
-        <Project />
-      </section>
-
-      <SideBar links={links} />
-
-    </main> 
+        <section className="flex flex-col gap-5 pb-16">
+          <h2 className="capitalize font-bold text-3xl">My Projects</h2>
+          <Project />
+        </section>
+      </main>
+    </div> 
   )
 }

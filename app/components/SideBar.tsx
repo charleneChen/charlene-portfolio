@@ -35,33 +35,40 @@ export default function SideBar({ links } : SideBarProp) {
     }, [links])
 
     return (
-        <aside className="relative">
-            <div className="fixed bottom-5 right-10 flex rounded-xl bg-[#1a1a1a]/85 border border-[#C8C8C8] text-white">
-                {/* Left dot colume */}
-                <div className="flex flex-col justify-around items-center py-6 pl-6">
-                    {links.map(link => (
-                    <span
-                        key={link.id}
-                        className="w-2 h-2 rounded-full bg-white"
-                    ></span>
-                    ))}
-                </div>
-
-                {/* Right text colume */}
-                <nav className="flex flex-col justify-around p-6">
-                    {links.map(link => {
-                        return (
-                        <Link 
-                            href={link.href}
+      <div>
+        <div className="hidden md:flex fixed left-0 top-0 h-screen z-1000">
+            <aside className="flex flex-col my-auto ml-2 w-45">
+                <div className="flex rounded-xl bg-[#1a1a1a]/65 border border-[#C8C8C8] text-white">
+                    {/* Left dot colume */}
+                    <div className="flex flex-col justify-around items-center py-6 pl-6 gap-6">
+                        {links.map(link => (
+                        <span
                             key={link.id}
-                            className="hover:text-orange-500 transition-colors"
-                        >
-                            {link.displayName}
-                        </Link>
-                        )
-                    })}
-                </nav>
-            </div>
-        </aside>
+                            className="w-2 h-2 rounded-full bg-white"
+                        ></span>
+                        ))}
+                    </div>
+
+                    {/* Right text colume */}
+                    <nav className="flex flex-col justify-around p-6 gap-6">
+                        {links.map(link => {
+                            return (
+                            <Link 
+                                href={link.href}
+                                key={link.id}
+                                className="hover:text-orange-500 transition-colors"
+                            >
+                                {link.displayName}
+                            </Link>
+                            )
+                        })}
+                    </nav>
+                </div>
+            </aside>
+        </div>
+        <div className="flex md:hidden">
+            <span>test</span>
+        </div>
+      </div>
     )
 }
