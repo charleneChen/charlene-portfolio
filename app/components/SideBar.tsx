@@ -36,7 +36,7 @@ export default function SideBar({ links } : SideBarProp) {
 
     return (
         <aside className="relative">
-            <div className="fixed bottom-10 left-10 flex rounded-xl bg-[#1a1a1a]/85 border border-[#C8C8C8] text-white">
+            <div className="fixed bottom-5 right-10 flex rounded-xl bg-[#1a1a1a]/85 border border-[#C8C8C8] text-white">
                 {/* Left dot colume */}
                 <div className="flex flex-col justify-around items-center py-6 pl-6">
                     {links.map(link => (

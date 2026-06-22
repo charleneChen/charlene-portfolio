@@ -28,3 +28,7 @@ export type SideBarProp = {
 export type ProjectsNavProps = {
   projects: Link[]
 }
+
+export type ProjectCardProps = {
+  project: Link
+}

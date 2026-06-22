@@ -55,7 +55,7 @@ export default async function Home() {
       </section>
       
       <section className="flex flex-col gap-5 my-20">
-        <h2 className="capitalize font-bold text-3xl">Selected Projects</h2>
+        <h2 className="capitalize font-bold text-3xl">My Projects</h2>
         <Project />
       </section>
 

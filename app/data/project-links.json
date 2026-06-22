@@ -1,7 +1,7 @@
 [
-    { "id": 1, "displayName": "Project 1 - xxxx", "slug": "project1", "href": "#project1" },
-    { "id": 2, "displayName": "Project 2 - yyyy", "slug": "project2", "href": "#project2" },
-    { "id": 3, "displayName": "Project 3 - zzzz", "slug": "project3", "href": "#project3" },
-    { "id": 4, "displayName": "Project 4 - aaaa", "slug": "project4", "href": "#project4" },
-    { "id": 5, "displayName": "Project 5 - bbbb", "slug": "project5", "href": "#project5" }
+    { "id": 1, "displayName": "Charlene's Portfolio", "slug": "portfolio", "href": "#portfolio" },
+    { "id": 2, "displayName": "Subnet Calculator", "slug": "subnetting", "href": "#subnetting" },
+    { "id": 3, "displayName": "AWS Cloudformation", "slug": "cloudformation", "href": "#cloudformation" },
+    { "id": 4, "displayName": "Automating Infrastructure Deployment", "slug": "automate", "href": "#automate" },
+    { "id": 5, "displayName": "Redmine Plugins", "slug": "redmine", "href": "#redmine" }
 ]
