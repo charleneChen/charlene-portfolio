@@ -46,8 +46,8 @@ export default async function Home() {
         </div>
 
         {/* Left - About me */}
-        <div className="flex-1 flex flex-col gap-5">
-          <h2 id="about" className="capitalize font-bold text-3xl">about me</h2>
+        <div id="about" className="flex-1 flex flex-col gap-5">
+          <h2 className="capitalize font-bold text-3xl">about me</h2>
 
           <p className="text-xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, quasi. Dicta quis quod quos ipsa vitae nostrum sed odio. Quidem nulla deserunt possimus reiciendis error distinctio, pariatur vitae consequatur aperiam.</p>
 
@@ -60,6 +60,10 @@ export default async function Home() {
         <section className="flex flex-col gap-5 pb-16">
           <h2 className="capitalize font-bold text-3xl">My Projects</h2>
           <Project />
+        </section>
+
+        <section id="experience">
+          test
         </section>
       </main>
     </div> 

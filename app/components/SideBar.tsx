@@ -3,36 +3,34 @@
 import type { SideBarProp } from "@/app/types"
 import Link from "next/link"
 import { useEffect, useState } from "react"
-import { usePathname } from "next/navigation"
+
 
 export default function SideBar({ links } : SideBarProp) {
-    const pathname = usePathname()
+  const [activeSection, setActiveSection] = useState('about')
 
-    const [active, setActive] = useState('')
-    useEffect(() => {
-        const observers: IntersectionObserver[] = []
-
-        links.forEach(({ href }) => {
-            const id = href.replace('#', '')
-            const el = document.getElementById(id)
-            if (!el) return
-
-            const observer = new IntersectionObserver(
-                ([entry]) => {
-                    if (entry.isIntersecting) setActive(href)
-                },
-                {
-                    rootMargin: '-40% 0px -60% 0px',
-                    threshold: 0,
-                }
-            )
-
-            observer.observe(el)
-            observers.push(observer)
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id)
+          }
         })
+      },
+      { 
+        rootMargin: "-50% 0px -50% 0px", // Shrink the top and bottom so it only fires in the middle of the screen
+        threshold: 0 // Fire when more than half the element enters this middle zone
+      }
+    )
 
-        return () => observers.forEach(o => o.disconnect())
-    }, [links])
+    links.forEach(link => {
+      const el = document.getElementById(link.href.replace("#", ""))
+      if (el) observer.observe(el)
+    })
+
+    return ()=> observer.disconnect()
+
+  }, [links])
 
     return (
       <div>
@@ -44,7 +42,10 @@ export default function SideBar({ links } : SideBarProp) {
                         {links.map(link => (
                         <span
                             key={link.id}
-                            className="w-2 h-2 rounded-full bg-white"
+                            className={`w-2 h-2 rounded-full transition-all duration-300
+                              ${activeSection === link.href.replace("#", "")
+                                    ? "bg-orange-500 scale-125"
+                                    : "bg-white"}`}
                         ></span>
                         ))}
                     </div>
@@ -56,7 +57,11 @@ export default function SideBar({ links } : SideBarProp) {
                             <Link 
                                 href={link.href}
                                 key={link.id}
-                                className="hover:text-orange-500 transition-colors"
+                                className={`hover:text-orange-500 transition-all duration-300
+                                  ${activeSection === link.href.replace("#", "")
+                                    ? "text-orange-500 scale-125"
+                                    : ""
+                                  }`}
                             >
                                 {link.displayName}
                             </Link>
