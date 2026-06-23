@@ -46,12 +46,13 @@ export default async function Home() {
         </div>
 
         {/* Left - About me */}
-        <div id="about" className="flex-1 flex flex-col gap-5">
-          <h2 className="capitalize font-bold text-3xl">about me</h2>
+        <div id="about" className="flex-1 flex flex-col gap-5 text-xl">
+          <h2 className="capitalize font-bold text-3xl">👋Hello! I'm Charlene.</h2>
+          <h2 className="capitalize font-bold text-3xl">Software <span className="text-indigo-600">Developer</span> and <span className="text-green-600">Cloud</span> Engineer.</h2>
 
-          <p className="text-xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero, quasi. Dicta quis quod quos ipsa vitae nostrum sed odio. Quidem nulla deserunt possimus reiciendis error distinctio, pariatur vitae consequatur aperiam.</p>
+          <p>My tech journey started in software engineering, working full-time as a <span className="font-bold">Ruby on Rails developer</span> in China from 2016 to 2019. When COVID hit, I decided to take a career break. Over the next few years, I ran a family e-commerce business on Taobao and spent that time focusing on raising my lovely daughter.</p>
 
-          <p className="text-xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit vel autem quod officiis voluptates error, possimus rerum quam nam consectetur eius vitae, tempora architecto ex iure pariatur dolorum, ipsum assumenda?</p>
+          <p>Ready for a new technical challenge, I recently returned to study with a focus on cloud computing. I completed my Cloud Engineering diploma at RMIT and achieved a <span className="font-bold">🥉 Bronze Medal</span> in the regional WorldSkills 2026 competition for Cloud Computing. I also validated my updated skill set with an <span className="font-bold">AWS Cloud Practitioner certification</span> (scoring 890/1000).</p>
 
           <SocialLinks />
         </div>
