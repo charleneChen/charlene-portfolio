@@ -26,12 +26,10 @@ export default function NavBar() {
   }, [])
   
   return (
-    <header className={`w-full sticky top-0 left-0 right-0 mt-8 z-500 transition-all duration-500
-      ${scrolled
+    <header className={`${scrolled
         ? "bg-white/60 backdrop-blur-md shadow-sm"
         : "bg-transparent"
-      }
-    `}>
+      }`}>
       <nav className="flex justify-between px-6 h-20">
         <Link href={"/"} className="flex items-cneter">
           <div className="flex items-center gap-2.5 cursor-pointer">

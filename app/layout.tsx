@@ -1,7 +1,6 @@
 import "./globals.css"
 import type { RootLayoutProps } from "@/app/types"
 import { Albert_Sans, Montserrat_Alternates } from "next/font/google"
-import NavBar from "@/app/components/NavBar"
 
 // If loading a variable font, you don't need to specify the font weight
 const albertSans = Albert_Sans({
@@ -20,8 +19,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
       <body className={`${albertSans.className} ${montserratAlternates.variable}`}>
-
-        <NavBar />
+        
         {children}
       
       </body>

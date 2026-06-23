@@ -9,7 +9,7 @@ export default async function Home() {
   const links = await getAllLinks()
 
   return (
-    <div className="">
+    <>
       <SideBar links={links} />
       <main className="flex flex-1 flex-col w-full max-w-full pl-0 md:pl-55">
         <section className="flex flex-col md:flex-row-reverse items-center gap-20 py-16">
@@ -66,6 +66,6 @@ export default async function Home() {
           test
         </section>
       </main>
-    </div> 
+    </> 
   )
 }
