@@ -5,6 +5,8 @@ import Image from "next/image"
 // usePathname is a Client Component hook that lets you read the current URL's pathname
 import { usePathname } from "next/navigation"
 import Logo from "@/public/charlenechen.png"
+import { useEffect, useState } from "react"
+
 
 const navigation = [
   { name: 'Home', href: '/'},
@@ -14,25 +16,38 @@ const navigation = [
 
 export default function NavBar() {
   const pathname = usePathname()
+
+  const [scrolled, setScrolled] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => setScrolled(window.scrollY > 50)
+    window.addEventListener("scroll", handleScroll)
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
   
   return (
-    <header className="w-full bg-sky-50 sticky top-0 z-500">
+    <header className={`w-full sticky top-0 left-0 right-0 mt-8 z-500 transition-all duration-500
+      ${scrolled
+        ? "bg-white/60 backdrop-blur-md shadow-sm"
+        : "bg-transparent"
+      }
+    `}>
       <nav className="flex justify-between px-6 h-20">
         <Link href={"/"} className="flex items-cneter">
           <div className="flex items-center gap-2.5 cursor-pointer">
-                  {/* Desktop logo */}
-                  <Image
-                    src={Logo}
-                    alt="Xiaolian (Charlene) Chen"
-                    className="w-16 h-16 border-4 border-orange-500 border-dashed rounded-full hidden md:block"
-                  />
-                  {/* Mobile logo */}
-                  <Image  
-                    src={Logo}
-                    alt="Xiaolian (Charlene) Chen"
-                    className="w-[60px] h-auto border-4 border-orange-500 border-dashed rounded-full block md:hidden"
-                  />
-                  <span className="font-bold text-2xl hidden md:inline">Tech with Charlene</span>
+            {/* Desktop logo */}
+            <Image
+              src={Logo}
+              alt="Xiaolian (Charlene) Chen"
+              className="w-16 h-16 border-4 border-orange-500 border-dashed rounded-full hidden md:block"
+            />
+            {/* Mobile logo */}
+            <Image  
+              src={Logo}
+              alt="Xiaolian (Charlene) Chen"
+              className="w-[60px] h-auto border-4 border-orange-500 border-dashed rounded-full block md:!hidden"
+            />
+            <span className="font-bold text-2xl hidden md:block">Tech with Charlene</span>
           </div>
         </Link>
 

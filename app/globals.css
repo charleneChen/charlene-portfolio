@@ -1,10 +1,25 @@
 @import "tailwindcss";
 
+/* ---------------------------------------- */
+/* ---------- Cstom styles ---------- */
+/* ---------------------------------------- */
+
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-montsterrat-alternates);
 }
 
 @theme {
-  /* This maps text-orange-accent and hover:text-orange-accent */
+  /* Design tokens → become Tailwind classes */
   --color-orange-accent: #F77D36;
+}
+
+/* selection styles */
+:root {
+  /* Non-Tailwind CSS variables */
+  --selection-background-color: hsl(50deg 100% 78%);
+  --selection-text-color: black;
+}
+::selection {
+  background-color: var(--selection-background-color);
+  color: var(--selection-text-color);
 }
