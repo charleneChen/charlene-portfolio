@@ -1,9 +1,5 @@
 [
-    { "id": 1, "displayName": "About Me", "href": "#about" },
-    { "id": 2, "displayName": "Project 1", "href": "#portfolio" },
-    { "id": 3, "displayName": "Project 2", "href": "#subnetting" },
-    { "id": 4, "displayName": "Project 3", "href": "#cloudformation" },
-    { "id": 5, "displayName": "Project 4", "href": "#automate" },
-    { "id": 6, "displayName": "Project 5", "href": "#redmine" },
-    { "id": 7, "displayName": "Experience", "href": "#experience" }
+  { "id": 1, "displayName": "About", "href": "#about" },
+  { "id": 2, "displayName": "Experience", "href": "#experience" },
+  { "id": 3, "displayName": "Projects", "href": "#projects" }
 ]

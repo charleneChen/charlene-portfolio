@@ -1,28 +1,17 @@
-import "./globals.css"
-import type { RootLayoutProps } from "@/app/types"
-import { Albert_Sans, Montserrat_Alternates } from "next/font/google"
+import "./globals.css";
+import type { RootLayoutProps } from "@/app/types";
+import localFont from "next/font/local";
 
 // If loading a variable font, you don't need to specify the font weight
-const albertSans = Albert_Sans({
-  subsets: ["latin"],
-  display: "swap"
-})
-
-const montserratAlternates = Montserrat_Alternates({
-  subsets: ["latin"],
-  display: "swap",
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
-  variable: "--font-montsterrat-alternates"
-})
+const cascadiaMono = localFont({
+  src: "../public/fonts/CascadiaMono.woff2",
+  variable: "--font-cascadia-mono",
+});
 
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
-      <body className={`${albertSans.className} ${montserratAlternates.variable}`}>
-        
-        {children}
-      
-      </body>
+      <body className={`${cascadiaMono.variable}`}>{children}</body>
     </html>
   );
 }

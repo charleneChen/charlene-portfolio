@@ -4,13 +4,18 @@
 /* ---------- Cstom styles ---------- */
 /* ---------------------------------------- */
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-montsterrat-alternates);
 }
 
 @theme {
   /* Design tokens → become Tailwind classes */
-  --color-orange-accent: #F77D36;
+  --color-orange-accent: #f77d36;
 }
 
 /* selection styles */
