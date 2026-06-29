@@ -4,27 +4,34 @@
 /* ---------- Cstom styles ---------- */
 /* ---------------------------------------- */
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: var(--font-montsterrat-alternates);
-}
-
 @theme {
   /* Design tokens → become Tailwind classes */
   --color-orange-accent: #f77d36;
 }
 
-/* selection styles */
-:root {
-  /* Non-Tailwind CSS variables */
-  --selection-background-color: hsl(50deg 100% 78%);
-  --selection-text-color: black;
+@layer base {
+  :root {
+    /* Non-Tailwind CSS variables */
+    --navbar-height: 5rem;
+    --selection-background-color: hsl(50deg 100% 78%);
+    --selection-text-color: black;
+    --my-marker: disc;
+  }
+  ::selection {
+    background-color: var(--selection-background-color);
+    color: var(--selection-text-color);
+  }
 }
-::selection {
-  background-color: var(--selection-background-color);
-  color: var(--selection-text-color);
+
+/* define new utility class */
+@utility h-navbar {
+  height: var(--navbar-height);
+}
+
+@utility sticky-top {
+  top: var(--navbar-height);
+}
+
+@utility max-h-primary {
+  height: calc(100vh - var(--navbar-height));
 }

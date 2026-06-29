@@ -1,7 +1,32 @@
 [
-    { "id": 1, "displayName": "Charlene's Portfolio", "slug": "portfolio", "href": "#portfolio" },
-    { "id": 2, "displayName": "Subnet Calculator", "slug": "subnetting", "href": "#subnetting" },
-    { "id": 3, "displayName": "AWS Cloudformation", "slug": "cloudformation", "href": "#cloudformation" },
-    { "id": 4, "displayName": "Automating Infrastructure Deployment", "slug": "automate", "href": "#automate" },
-    { "id": 5, "displayName": "Redmine Plugins", "slug": "redmine", "href": "#redmine" }
+  {
+    "id": 1,
+    "displayName": "xlianchen.com",
+    "slug": "portfolio",
+    "href": "#portfolio"
+  },
+  {
+    "id": 2,
+    "displayName": "Redmine Plugins",
+    "slug": "redmine",
+    "href": "#redmine"
+  },
+  {
+    "id": 3,
+    "displayName": "Subnet Calculator",
+    "slug": "subnetting",
+    "href": "#subnetting"
+  },
+  {
+    "id": 4,
+    "displayName": "AWS Cloudformation",
+    "slug": "cloudformation",
+    "href": "#cloudformation"
+  },
+  {
+    "id": 5,
+    "displayName": "Automating Infrastructure Deployment",
+    "slug": "automate",
+    "href": "#automate"
+  }
 ]
